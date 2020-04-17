@@ -1,0 +1,612 @@
+$bgcolor: #ffc800;
+$btn-color: #4caf50;
+$body-color: #f5f6fa;
+$font-size-title-mobile: 20px;
+$font-size-title-desktop: 28px;
+$font-size-mobile: 18px;
+$font-size-desktop: 22px;
+$border-color: #1d1d1b;
+$color: #323234;
+$font-family: ursa-sans, "Helvetica Neue", Helvetica, Poppins, Arial, sans-serif;
+
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  font-family: $font-family;
+  background: $body-color;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-bottom: 3px solid $color;
+  .header-nav {
+    padding-bottom: 10px;
+  }
+}
+.nav-list {
+  padding: 0 20px 20px 20px;
+}
+.main-nav {
+  list-style-type: none;
+  display: none;
+  animation: zoomIn 2s alternate;
+  -webkit-animation: zoomIn 2s alternate;
+
+  li {
+    text-align: left;
+    margin: 15px auto;
+    a {
+      text-decoration: none;
+      position: relative;
+      left: 9rem;
+      font-size: 18px;
+      color: $color;
+    }
+  }
+}
+
+.logo {
+  margin-left: 10px;
+  position: relative;
+  top: -15px;
+
+  img {
+    height: 100px;
+  }
+}
+
+.navbar-toggle {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  width: 35px;
+  margin-left: 88%;
+  top: 30px;
+  cursor: pointer;
+  color: $color;
+  font-size: 40px;
+  z-index: 1;
+}
+@keyframes zoomIn {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.2, 1.2);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+.active {
+  display: block;
+}
+
+.btn-donate {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 15%;
+
+  .button-donate {
+    position: absolute;
+    top: 30px;
+    background: $btn-color;
+    border: none;
+    color: $body-color;
+    padding: 8px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    border-radius: 23px;
+  }
+}
+
+.search {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 70px;
+
+  input {
+    height: 15px;
+    border-radius: 20px;
+    padding: 10px;
+  }
+
+  .search-svg {
+    display: none;
+    height: 40px;
+    width: 40px;
+    border-radius: 10px;
+  }
+  .search-mobile {
+    height: 35px;
+    width: 80px;
+    border-radius: 20px;
+    position: absolute;
+    right: 20px;
+    border: 2px solid $border-color;
+    background: $bgcolor;
+    text-transform: uppercase;
+  }
+}
+
+.text-donate {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 8vh;
+  background: $bgcolor;
+
+  .text-p {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 40px;
+    margin-top: 12px;
+    background: $bgcolor;
+    text-align: center;
+    font-size: $font-size-title-mobile;
+    font-weight: 500;
+  }
+
+  .text-mobile {
+    height: 40px;
+    margin-top: -54px;
+    margin-left: 90%;
+  }
+}
+
+.main-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .image-main {
+    width: 100%;
+  }
+  #myVideo {
+    display: none;
+  }
+
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    bottom: 256px;
+    background: $bgcolor;
+    padding: 20px;
+    margin: 20px 10px;
+    border-radius: 46%;
+  }
+  .subtitle-main {
+    padding: 10px 5px;
+    margin: 10px 25px;
+    font-size: $font-size-title-mobile;
+    font-weight: 500;
+  }
+
+  .text-main {
+    margin-left: 14px;
+    padding: 0 10px;
+    font-size: $font-size-mobile;
+  }
+}
+
+.card-container {
+  display: grid;
+  grid-template-rows: repeat(1, 1fr);
+  grid-gap: 30px;
+  position: relative;
+  bottom: 170px;
+  width: 100%;
+
+  .card {
+    width: 100%;
+    border-radius: 25px;
+    background: $bgcolor;
+
+    .card-image {
+      width: 100%;
+      border-radius: 20px;
+    }
+  }
+
+  .card-content {
+    text-align: left;
+    margin: 40px;
+  }
+}
+
+.stay-in-touch {
+  text-align: center;
+  background: $bgcolor;
+  position: relative;
+  bottom: 90px;
+
+  &-message {
+    position: relative;
+    bottom: 70px;
+    padding: 20px;
+  }
+  &-message p:first-child {
+    font-weight: 500;
+    font-size: $font-size-title-mobile;
+  }
+  .mail-img {
+    position: relative;
+    bottom: 30px;
+    animation: bounceInUp 4s backwards;
+  }
+}
+
+.btn-signup,
+.btn-send {
+  height: 70px;
+  width: 250px;
+  border: 2px solid $border-color;
+  background: $bgcolor;
+  padding: 10px 20px;
+  position: relative;
+  bottom: 30px;
+  border-radius: 30px;
+  font-size: $font-size-mobile;
+  font-weight: 500;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+input[type="name"],
+input[type="email"] {
+  width: 100%;
+  height: 50px;
+  padding: 12px 20px;
+  margin: 20px 0;
+  display: inline-block;
+  border: 1px solid $border-color;
+  box-sizing: border-box;
+}
+.btn-send {
+  width: 170px;
+  bottom: 0;
+  margin-top: 50px;
+}
+.btn-send:hover {
+  opacity: 1;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 80%;
+  height: 100%;
+  overflow: auto;
+  background: #f7f1e3;
+  padding-top: 60px;
+}
+.modal form {
+  display: block;
+}
+.close {
+  position: relative;
+  top: 2px;
+}
+.close i {
+  font-size: 22px;
+}
+.modal h3 {
+  font-size: $font-size-title-desktop;
+}
+.modal-container {
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+
+  .modal-container label {
+    font-size: $font-size-mobile;
+  }
+}
+
+.modal-close {
+  background: $bgcolor;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  position: relative;
+  bottom: 10.5rem;
+  left: 13rem;
+  border: 2 solid $border-color;
+}
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s;
+}
+
+@-webkit-keyframes animatezoom {
+  from {
+    -webkit-transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes animatezoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes bounceInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(300px);
+    bottom: 0px;
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-30px);
+    bottom: 15px;
+  }
+  80% {
+    transform: translateY(10px);
+    bottom: 30px;
+  }
+  100% {
+    transform: translateY(0);
+    bottom: 45px;
+  }
+}
+
+.footer {
+  background: $border-color;
+  color: $body-color;
+  position: relative;
+  z-index: 2;
+  padding: 2rem 0;
+
+  .grid-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .grid-x {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  .grid-margin-x {
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+  }
+  .grid-margin-y {
+    margin-top: -0.5rem;
+    margin-bottom: -0.5rem;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  &-links__title,
+  &-links li {
+    margin-bottom: 0.7rem;
+
+    a {
+      color: $body-color;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+
+  .grid-margin-x > .small-6 {
+    width: calc(50% - 1rem);
+  }
+  .grid-margin-y:not(.grid-y) > .cell {
+    height: auto;
+  }
+  .grid-margin-y > .cell {
+    height: calc(100% - 1rem);
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  li::first-letter {
+    text-transform: uppercase;
+  }
+}
+
+@media (min-width: 992px) {
+  .logo {
+    margin-top: 20px;
+  }
+  .logo img {
+    height: 200px;
+    width: 200px;
+  }
+  .logo-mobile {
+    position: relative;
+    top: 1.2rem;
+  }
+  .nav-list {
+    padding: 0;
+
+    .main-nav {
+      width: 60%;
+      display: flex;
+      position: relative;
+      bottom: 190px;
+      left: 10rem;
+      animation: none;
+    }
+  }
+
+  .navbar-toggle {
+    display: none;
+  }
+
+  .main-nav {
+    li {
+      a {
+        margin-left: 10px;
+        font-size: 20px;
+        font-weight: 500;
+      }
+    }
+  }
+  .btn-donate {
+    position: relative;
+    bottom: 18.5rem;
+    left: 10rem;
+    margin-bottom: -160px;
+
+    .button-donate {
+      width: 130px;
+      height: 45px;
+      font-size: $font-size-title-mobile;
+      font-weight: 600;
+    }
+  }
+
+  .search {
+    position: relative;
+    bottom: 180px;
+
+    .search-mobile,
+    form {
+      display: none;
+    }
+    .search,
+    .search-svg {
+      display: block;
+      width: 200px;
+    }
+  }
+
+  .text-donate {
+    height: 60px;
+
+    .text-p {
+      margin-right: 100px;
+    }
+  }
+  .main-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .image-main {
+      display: none;
+    }
+
+    #myVideo {
+      display: block;
+      position: relative;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+    }
+    .main-content {
+      width: 30rem;
+      height: 14rem;
+      left: 4rem;
+      bottom: 30rem;
+      border-radius: 1rem;
+    }
+    .subtitle-main {
+      font-size: $font-size-title-desktop;
+    }
+    .text-main {
+      font-size: $font-size-desktop;
+    }
+  }
+
+  .card-container {
+    margin-top: 4.5rem;
+    margin-bottom: 4.5rem;
+    display: flex;
+    flex-direction: row;
+
+    .card {
+      margin: 20px;
+    }
+
+    .card-content {
+      font-size: $font-size-title-mobile;
+    }
+  }
+
+  .stay-in-touch {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    position: relative;
+
+    &-message {
+      font-size: $font-size-title-mobile;
+      top: 2rem;
+      left: 14rem;
+    }
+    &-message p:first-child {
+      font-size: $font-size-desktop;
+      margin-bottom: 15px;
+    }
+    .mail-img {
+      width: 250px;
+      left: 12rem;
+      bottom: 15px;
+    }
+
+    .btn-signup {
+      width: 20rem;
+      top: 13rem;
+      right: 17rem;
+    }
+  }
+
+  .modal {
+    width: 50%;
+  }
+
+  .modal-close {
+    left: 4rem;
+    bottom: 3.7rem;
+  }
+
+  .footer {
+    padding: 3.75rem 6rem;
+
+    &-links {
+      li {
+        font-size: $font-size-title-mobile;
+      }
+    }
+
+    .grid-container {
+      padding-left: 7rem;
+      padding-right: 7rem;
+    }
+    .grid-x {
+      flex-flow: row;
+    }
+    .grid-margin-x > .small-6 {
+      width: calc(53% - 10rem);
+    }
+
+    .grid-margin-x {
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+    .grid-margin-y {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+  }
+}

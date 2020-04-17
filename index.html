@@ -3,7 +3,163 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="scss/styles.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>School Term Support</title>
   </head>
-  <body></body>
+  <body id="main-page">
+    <header>
+      <div class="header-container">
+        <div class="header-nav">
+          <span class="navbar-toggle" id="navbar-toggle">
+            <i class="fa fa-bars"></i>
+          </span>
+          <div class="logo">
+            <a class="logo-mobile" href="#"> <img src="./images/logo.svg" alt="logo"/>
+            
+          </div>
+          <div class="nav-list">
+            <ul class="main-nav" id="nav-menu">
+              <li><a href="#">Fundraising</a></li>
+              <li><a href="#">Changing Lives</a></li>
+              <li><a href="#">Schools</a></li>
+              <li><a href="#">About us</a></li>
+              <li><a id="contact-us" href="./contact/contact.html">Contact us</a></li>
+            </ul>
+          </div>
+          <div class="search">
+            <form action="/action_page.php">
+              <input type="text" placeholder="Search.." name="search">
+                <img class="search-svg" src="./images/search.svg" />
+              <button class="search-mobile">Search</button>
+            </form>
+          </div>
+        <div class="btn-donate">
+          <button class="button-donate">DONATE</button>
+        </div>
+      </div>
+    </div>
+      </div>
+    </header>
+    <div class = "main-section"> 
+      <section id="Content">
+       <div class="text-donate">
+            <p class="text-p">Text to donate terms</p>
+            <img class="text-mobile" src="./images/mobile.svg" />
+          </div>
+          <div class="main-container">
+            <div class="main-image">
+              <img class="image-main"  src="./images/boy-school.jpg" alt="school-boy-backpack" />
+              <video autoplay muted loop  id="myVideo">
+                <source src="./images/rain.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="main-content">
+              <h3 class="subtitle-main">School Term Support</h3> 
+              <p class="text-main">Lorem ipsum dolor sit amet, consectetur adipiscing elit accumsan, consectetur adipiscing elit accumsan.</p>
+            </div>
+          </div>   
+</section> 
+<section>
+  <div class="card-container">
+    <div class="card">
+      <img class="card-image" src="./images/message.svg" alt="Alps">
+      <div class="card-content">
+        <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit accumsan.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-image" src="./images/students.svg" alt="Alps">
+      <div class="card-content">
+        <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit accumsan.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-image" src="./images/color-pencle.svg" alt="Alps">
+      <div class="card-content">
+        <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit accumsan.</p>
+      </div>
+    </div>
+   </div>
+</section>
+<section>
+  <div class="stay-in-touch">  
+   <img class="mail-img 'data-appear-top-offset='-300"  src="./images/mail.svg" alt="mail">
+      <div class="stay-in-touch-message">
+        <p >Stay in touch</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit accumsan.</p>
+      </div>
+      <div class="signup">
+        <button onclick="modalNewLetter()" class="btn-signup">Sign Up for Our Newsletter</button>
+        <div id="modal-newsletter" class="modal animate">
+          <h3>Sign up to our newsletter</h3>
+          <div class="modal-close">
+            <i onclick="modalClose()" class="fa fa-close close"></i>
+          </div>
+           <form class="modal-content" action="/action_page.php" method="post">
+             <div class="modal-container">
+               <label for="fullname" class="fullname"><b>Full Name</b></label>
+               <input type="name" placeholder="Full Name" name="fullname" required>
+               <label for="email"><b>Email</b></label>
+               <input type="email" placeholder="Email" name="email" required>  
+               <button class="btn-send" type="submit">Send</button>
+             </div>
+           </form>
+         </div>
+        </div>
+      </div>
+  </div>
+</section>
+</div> 
+<footer class="footer">
+  <div class="grid-container">
+    <div class="footer-grid__cell footer-grid__cell--links cell large-12 xlarge-5 xxlarge-6">
+      <div class="grid-x grid-margin-x grid-margin-y">
+        <div class="cell small-6 large-4 xlarge-6 xxlarge-4">
+          <h2 class="footer-links__title">Site map</h2>
+          <ul class="footer-links">
+            <li><a href="#">Fundraising</a></li>
+            <li><a href="#">Changing Lives</a></li>
+            <li><a href="#">Schools</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="cell small-6 large-4 xlarge-6 xxlarge-4">
+          <h2 class="footer-links__title">Useful links</h2>
+          <ul class="footer-links">
+            <li><a href="#">media center</a></li>
+            <li><a href="#">
+              corporate partners
+            </a></li>
+            <li><a href="#">competition winners</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="cell medium-12 large-4 xlarge-12 xxlarge-4">
+          <h2 class="footer-links__title">Legal links</h2>
+          <ul class="footer-links">
+            <li><a href="#">
+              Cookies control center
+            </a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of use</a></li>
+            <li><a href="#">Fair Fundraising</a></li>
+            <li><a href="#">
+              Modern Slavery
+            </a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer> 
+<script src="index.js"></script>
+    <script src="./contact/contact.js"></script>
+  </body>
 </html>
+
